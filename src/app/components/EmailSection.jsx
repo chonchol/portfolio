@@ -48,10 +48,10 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-5 max-w-md">
           {" "}
-          Whether you're looking to revamp your existing website, create a new
-          one from scratch, or develop a powerful web application, I'm here to
-          help. Let's connect and discuss your project goals, requirements, and
-          expectations.
+          Whether you&apos;re looking to revamp your existing website, create a
+          new one from scratch, or develop a powerful web application, I&apos;m
+          here to help. Let&apos;s connect and discuss your project goals,
+          requirements, and expectations.
         </p>
         <div className="socials flex flex-row gap-6">
           <Link
