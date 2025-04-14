@@ -98,13 +98,6 @@ const EmailSection = () => {
           </form>
         )}
       </div>
-
-      {/* Required hidden form for Netlify build-time prerendering */}
-      <form name="contact" netlify hidden>
-        <input type="text" name="email" />
-        <input type="text" name="subject" />
-        <textarea name="message" />
-      </form>
     </section>
   );
 };
