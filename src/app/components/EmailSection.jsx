@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Alert } from "./Alert";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -48,80 +49,77 @@ const EmailSection = () => {
         </p>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="flex flex-col"
+          onSubmit={handleFormSubmit}
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p className="hidden">
+            <label>
+              Don&apos;t fill this out: <input name="bot-field" />
+            </label>
           </p>
-        ) : (
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            className="flex flex-col"
-            onSubmit={handleFormSubmit}
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p className="hidden">
-              <label>
-                Don&apos;t fill this out: <input name="bot-field" />
-              </label>
-            </p>
 
-            <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
-              >
-                Your email
-              </label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="chonchol57@gmail.com"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Subject
-              </label>
-              <input
-                name="subject"
-                type="text"
-                id="subject"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+          <div className="mb-6">
+            <label
+              htmlFor="email"
+              className="text-white block mb-2 text-sm font-medium"
             >
-              Send Message
-            </button>
-          </form>
-        )}
+              Your email
+            </label>
+            <input
+              name="email"
+              type="email"
+              id="email"
+              required
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="chonchol57@gmail.com"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="subject"
+              className="text-white block text-sm mb-2 font-medium"
+            >
+              Subject
+            </label>
+            <input
+              name="subject"
+              type="text"
+              id="subject"
+              required
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Just saying hi"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="text-white block text-sm mb-2 font-medium"
+            >
+              Message
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Let's talk about..."
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+          >
+            Send Message
+          </button>
+
+          {status === "ok" && <Alert type="success">Submitted!</Alert>}
+          {status === "error" && <Alert type="error">{error}</Alert>}
+        </form>
       </div>
     </section>
   );
