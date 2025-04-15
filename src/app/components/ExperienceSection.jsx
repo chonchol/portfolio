@@ -1,3 +1,7 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+
 export default function ExperienceSection() {
   const experiences = [
     {
@@ -28,64 +32,104 @@ export default function ExperienceSection() {
 
   return (
     <section className="py-16">
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-white mb-4 relative">
+      <div className="mx-auto px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-white mb-10 relative"
+        >
           Work Experience
-          <span className="block w-16 h-1 bg-primary-500 mt-2 rounded-full"></span>
-        </h2>
+          <motion.span
+            initial={{ width: 0 }}
+            whileInView={{ width: "4rem" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="block h-1 bg-indigo-500 mt-4 rounded-full"
+          ></motion.span>
+        </motion.h2>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-primary-400"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-indigo-400"></div>
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={exp.id}
-              className={`mb-16 flex flex-col md:flex-row items-center justify-between transition-all duration-700 ease-out opacity-0 animate-fade-in-up relative`}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className={`mb-5 flex flex-col md:flex-row items-center justify-between relative`}
             >
               {index % 2 === 0 ? (
                 <>
-                  <div className="w-full md:w-1/2 pr-8">
-                    <div className="bg-white shadow-lg rounded-xl p-6">
-                      <h3 className="text-xl font-bold text-gray-900">
+                  <motion.div
+                    className="w-full md:w-1/2 pr-8"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="bg-black shadow-lg rounded-xl p-6">
+                      <h3 className="text-xl font-bold text-white">
                         {exp.title}
                       </h3>
-                      <p className="text-primary-600 font-semibold">
+                      <p className="text-indigo-600 font-semibold">
                         {exp.company}
                       </p>
                       <p className="text-sm text-gray-500 mb-4">
                         {exp.duration}
                       </p>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-white text-sm leading-relaxed">
                         {exp.description}
                       </p>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-primary-400 text-primary-600 font-bold flex items-center justify-center z-10">
+                  </motion.div>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.2 + 0.1 }}
+                    viewport={{ once: true }}
+                    className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-indigo-400 text-indigo-600 font-bold flex items-center justify-center z-10"
+                  >
                     {exp.id}
-                  </div>
+                  </motion.div>
                 </>
               ) : (
                 <>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-primary-400 text-primary-600 font-bold flex items-center justify-center z-10">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.2 + 0.1 }}
+                    viewport={{ once: true }}
+                    className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-indigo-400 text-indigo-600 font-bold flex items-center justify-center z-10"
+                  >
                     {exp.id}
-                  </div>
-                  <div className="w-full md:w-1/2 ml-auto pl-8">
-                    <div className="bg-white shadow-lg rounded-xl p-6">
-                      <h3 className="text-xl font-bold text-gray-900">
+                  </motion.div>
+                  <motion.div
+                    className="w-full md:w-1/2 ml-auto pl-8"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="bg-black shadow-lg rounded-xl p-6">
+                      <h3 className="text-xl font-bold text-white">
                         {exp.title}
                       </h3>
-                      <p className="text-primary-600 font-semibold">
+                      <p className="text-indigo-600 font-semibold">
                         {exp.company}
                       </p>
                       <p className="text-sm text-gray-500 mb-4">
                         {exp.duration}
                       </p>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-white text-sm leading-relaxed">
                         {exp.description}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -50,6 +50,24 @@ const TAB_DATA = [
       </ul>
     ),
   },
+  {
+    title: "NPM Packages",
+    id: "npm-packages",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>
+          <a href="https://www.npmjs.com/package/react-hero-image-slider">
+            React Hero Image Slider
+          </a>
+        </li>
+        <li>
+          <a href="https://www.npmjs.com/package/react-smart-notification-toaster">
+            React Smart Notification Toaster
+          </a>
+        </li>
+      </ul>
+    ),
+  },
 ];
 
 const AboutSection = () => {
@@ -103,6 +121,13 @@ const AboutSection = () => {
             >
               {" "}
               Certifications{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("npm-packages")}
+              active={tab === "npm-packages"}
+            >
+              {" "}
+              NPM Packages{" "}
             </TabButton>
           </div>
           <div className="mt-8">
