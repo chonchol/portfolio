@@ -28,7 +28,7 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <section className="py-16" id="testimonial">
+    <section className="py-8 md:py-16" id="testimonial">
       <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -94,7 +94,7 @@ export default function TestimonialSection() {
         </motion.div>
         <motion.div
           className="flex flex-col gap-5"
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}

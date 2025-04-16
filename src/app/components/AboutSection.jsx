@@ -51,7 +51,7 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "NPM Packages",
+    title: "Packages",
     id: "npm-packages",
     content: (
       <ul className="list-disc pl-2">
@@ -127,7 +127,7 @@ const AboutSection = () => {
               active={tab === "npm-packages"}
             >
               {" "}
-              NPM Packages{" "}
+              Packages{" "}
             </TabButton>
           </div>
           <div className="mt-8">

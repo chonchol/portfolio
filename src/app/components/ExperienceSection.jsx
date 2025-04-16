@@ -32,7 +32,7 @@ export default function ExperienceSection() {
 
   return (
     <section className="py-16">
-      <div className="mx-auto px-4">
+      <div className="mx-auto px-0 md:px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function ExperienceSection() {
           ></motion.span>
         </motion.h2>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-indigo-400"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-indigo-400"></div>
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -63,7 +63,7 @@ export default function ExperienceSection() {
               {index % 2 === 0 ? (
                 <>
                   <motion.div
-                    className="w-full md:w-1/2 pr-8"
+                    className="w-full md:w-1/2 pr-0 md:pr-8"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
@@ -85,11 +85,11 @@ export default function ExperienceSection() {
                     </div>
                   </motion.div>
                   <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
+                    initial={{ scale: 0, x: "-50%" }}
+                    whileInView={{ scale: 1, x: "-50%" }}
                     transition={{ duration: 0.3, delay: index * 0.2 + 0.1 }}
                     viewport={{ once: true }}
-                    className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-indigo-400 text-indigo-600 font-bold flex items-center justify-center z-10"
+                    className="hidden absolute left-1/2 w-12 h-12 rounded-full bg-white border-4 border-indigo-400 text-indigo-600 font-bold md:flex items-center justify-center"
                   >
                     {exp.id}
                   </motion.div>
@@ -97,16 +97,16 @@ export default function ExperienceSection() {
               ) : (
                 <>
                   <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
+                    initial={{ scale: 0, x: "-50%" }}
+                    whileInView={{ scale: 1, x: "-50%" }}
                     transition={{ duration: 0.3, delay: index * 0.2 + 0.1 }}
                     viewport={{ once: true }}
-                    className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-indigo-400 text-indigo-600 font-bold flex items-center justify-center z-10"
+                    className="hidden absolute left-1/2 w-12 h-12 rounded-full bg-white border-4 border-indigo-400 text-indigo-600 font-bold md:flex items-center justify-center"
                   >
                     {exp.id}
                   </motion.div>
                   <motion.div
-                    className="w-full md:w-1/2 ml-auto pl-8"
+                    className="w-full md:w-1/2 ml-auto pl-0 md:pl-8"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}

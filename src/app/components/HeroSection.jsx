@@ -38,7 +38,7 @@ const HeroSection = () => {
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             A detail-oriented Web Developer with extensive experience in both
-            front-end and back-enddevelopment.
+            front-end and back-end development.
           </p>
           <div>
             <Link

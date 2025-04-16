@@ -21,8 +21,9 @@ const achievementsList = [
     value: "30",
   },
   {
-    metric: "Awards",
-    value: "7",
+    metric: "Rating",
+    value: "5",
+    postfix: "*",
   },
   {
     metric: "Years",
