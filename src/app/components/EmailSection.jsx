@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Alert } from "./Alert";
+import SocialIcon from "./SocialIcon";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -48,6 +49,9 @@ const EmailSection = () => {
           requirements, and expectations.
         </p>
         <p>Email: chonchol57@gmail.com</p>
+        <div className="flex items-center space-x-6 py-4">
+          <SocialIcon iconwidth={"w-10"} iconheight={"h-10"} />
+        </div>
       </div>
       <div>
         <form

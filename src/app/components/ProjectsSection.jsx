@@ -7,26 +7,6 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Employee Management Application",
-    description:
-      "This application is provides a minimal setup for employee management app in ReactJS, tailwind css and saved data into local storage in Card and Table view.",
-    image: "/images/projects/1.png",
-    tag: ["All", "Frontend"],
-    gitUrl: "//github.com/chonchol/brotecs-assignment-test",
-    previewUrl: "//employee-management007.netlify.app",
-  },
-  {
-    id: 2,
-    title: "EMR Application",
-    description:
-      "A patient dashboard application built with Vanila JavaScript, TailwindCSS and used fake API for data.",
-    image: "/images/projects/2.png",
-    tag: ["All", "Frontend"],
-    gitUrl: "//github.com/chonchol/patient-dashboard",
-    previewUrl: "//patient-dashboard-js.netlify.app/",
-  },
-  {
-    id: 3,
     title: "Sports Wear Ecommerce Template",
     description:
       "A modern sports wear ecommerce template built with HTML, CSS, TailwindCSS",
@@ -36,7 +16,7 @@ const projectsData = [
     previewUrl: "//sportswear-ecom.netlify.app/",
   },
   {
-    id: 4,
+    id: 2,
     title: "Ecommerce Template",
     description:
       "A modern ecommerce template built with HTML, CSS, TailwindCSS",
@@ -46,7 +26,17 @@ const projectsData = [
     previewUrl: "//ecommerce-tailwind1.netlify.app/",
   },
   {
-    id: 5,
+    id: 3,
+    title: "EMR Application",
+    description:
+      "A patient dashboard application built with Vanila JavaScript, TailwindCSS and used fake API for data.",
+    image: "/images/projects/2.png",
+    tag: ["All", "Frontend"],
+    gitUrl: "//github.com/chonchol/patient-dashboard",
+    previewUrl: "//patient-dashboard-js.netlify.app/",
+  },
+  {
+    id: 4,
     title: "VueJS Shop Template",
     description:
       "A VueJs shop template built with VueJS, TailwindCSS. It has multi filtering and sorting functionality.",
@@ -56,17 +46,7 @@ const projectsData = [
     previewUrl: "//vue-shoppage.netlify.app/",
   },
   {
-    id: 6,
-    title: "Weather App with VueJS",
-    description:
-      "A simple weather app built with VueJS, TailwindCSS and OpenWeather API.",
-    image: "/images/projects/6.png",
-    tag: ["All", "Frontend"],
-    gitUrl: "//github.com/chonchol/weather-app",
-    previewUrl: "//vue-weather-app1.netlify.app/",
-  },
-  {
-    id: 7,
+    id: 5,
     title: "Online Course Website with WordPress",
     description: "Build this website with custom template and Elementor plugin",
     image: "/images/projects/7.png",
@@ -75,7 +55,7 @@ const projectsData = [
     previewUrl: "//myuxacademy.com/",
   },
   {
-    id: 8,
+    id: 6,
     title: "UTAC - Electronic Part selling Website",
     description:
       "Developed this website with HTML and SCSS from adobe XD. Lately it convert to the WordPress theme.",
@@ -85,7 +65,17 @@ const projectsData = [
     previewUrl: "//utac.atlastestsite.xyz",
   },
   {
-    id: 9,
+    id: 7,
+    title: "React Employee Management Application",
+    description:
+      "This application is provides a minimal setup for employee management app in ReactJS, tailwind css and saved data into local storage in Card and Table view.",
+    image: "/images/projects/1.png",
+    tag: ["All", "Frontend"],
+    gitUrl: "//github.com/chonchol/brotecs-assignment-test",
+    previewUrl: "//employee-management007.netlify.app",
+  },
+  {
+    id: 8,
     title: "Agency website with WordPress",
     description:
       "An agency website which is build with custom template and Elementor plugin",
@@ -95,7 +85,7 @@ const projectsData = [
     previewUrl: "//cheetahconversions.com/",
   },
   {
-    id: 10,
+    id: 9,
     title: "Deepfashion - Image generation application",
     description:
       "This was an image generation application which transfer garment images to on-model photos",
@@ -103,6 +93,16 @@ const projectsData = [
     tag: ["All", "Frontend", "Backend"],
     gitUrl: "/",
     previewUrl: "//deepfashion.netlify.app",
+  },
+  {
+    id: 10,
+    title: "Weather App with VueJS",
+    description:
+      "A simple weather app built with VueJS, TailwindCSS and OpenWeather API.",
+    image: "/images/projects/6.png",
+    tag: ["All", "Frontend"],
+    gitUrl: "//github.com/chonchol/weather-app",
+    previewUrl: "//vue-weather-app1.netlify.app/",
   },
 ];
 
